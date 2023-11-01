@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pc2</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>To design a network in Cisco Packet Tracer connecting the ACCOUNTS and DELIVERY departments,
+follow these steps. We'll create a basic network topology with two departments, each containing
+at least two computers, and ensure that they can ping each other using the given network address
+192.168.40.0. We'll use Cisco Packet Tracer for this example.
+
+1. Create the Network Topology:
+   Use Packet Tracer to create a new project and add devices to your topology. You'll need the following components:
+    
+    - 2 Computers for the ACCOUNTS department.
+    - 2 Computers for the DELIVERY department.
+    - 2 Switches (one for each department).
+    - 1 Router to connect the two departments.
+
+2. Assign IP Addresses:
+
+    You should assign IP addresses, subnet masks, and gateways to each device. In this example,
+	we'll use the 192.168.40.0 network.
+
+    - For the ACCOUNTS department:
+        - Computer 1: IP 192.168.40.1 /24 (Subnet Mask 255.255.255.0), Gateway 192.168.40.254
+        - Computer 2: IP 192.168.40.2 /24 (Subnet Mask 255.255.255.0), Gateway 192.168.40.254
+		
+    - For the DELIVERY department:
+        - Computer 1: IP 192.168.41.3 /24 (Subnet Mask 255.255.255.0), Gateway 192.168.41.254
+        - Computer 2: IP 192.168.41.4 /24 (Subnet Mask 255.255.255.0), Gateway 192.168.41.254
+
+    - Router:
+        - Connect the Router's FastEthernet interface to both switches.
+        - Configure two sub-interfaces on the Router's FastEthernet interface.
+            - Sub-interface for VLAN1 (ACCOUNTS):
+                - IP 192.168.40.254 /24 (Subnet Mask 255.255.255.0)
+            - Sub-interface for VLAN2 (DELIVERY):
+                - IP 192.168.41.254 /24 (Subnet Mask 255.255.255.0)
+
+3. Test Connectivity:
+    You should be able to ping between computers in the ACCOUNTS and DELIVERY departments now. 
+	For example, from a computer in the ACCOUNTS department, you should be able to ping computers in the DELIVERY 
+	department and vice versa.
+
+This setup segregates the two departments into different VLANs, allowing them to communicate through the router.
+The router serves as a gateway between the two VLANs, allowing traffic to flow between them while keeping them 
+logically separate.</p>
+
+</body>
+</html>
